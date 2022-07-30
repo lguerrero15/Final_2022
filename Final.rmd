@@ -1,6 +1,6 @@
 ---
 title: "Covid91 vaccine study Final2022"
-author: "Put your name here!"
+author: "Leilani Guerrero"
 output: 
   html_document:
     number_sections: true
@@ -26,8 +26,29 @@ A new  preventative vaccine (covid91) is under test in clinical trials. Given th
 
 ## Males
 
+### inferential results   
+
+In here you have the chi-squared test results and the fisher exact test result.
+
+Suppose I got a fisher exact value of 4.22 (odds ratio)
+Also 95% CI  on the odds ratio (3.82, 4.91)
+
+```{r}
+efficMales = 4.22/(4.22 + 1)* 100
+efficMales = round(efficMales)
+
+confIntLower = 3.82/(3.82 + 1)* 100
+confIntLower = round(confIntLower)
+confIntUpper = 4.91/(4.91 + 1)*100
+confIntUpper = round(confIntUpper)
+```
+
+The efficacy for Males was 'r' efficMales'%  
+
+
 
 ## Females
+
 
 
 ## LGBTQ
