@@ -24,7 +24,31 @@ mutate(across(where(is.character), as.factor))
 
 A new  preventative vaccine (covid91) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
 
+
+## Null and Alternative hypothsis
+
+$H_0$: there is no difference between how effective the vaccine is for any of the subgroup that uses it. Independent variable.
+
+$H_A$: there is a difference between how effective the vaccine is for any of the subgroup that uses it. Dependent variable.
+
+## Methods
+
+This data set is a CAT~CAR since both variables are categorical. Wheather the vaccine is effective or not can be categorized and also, the subgroups can be categorized. a barplot will be used to describe the graphical results. a data table for the umerical results, a chi-squared test and fisher exact test to describe the interential results for the different 4 subgroups. to end i will give my recommendation on whether or not each subgroup should take vaccine
+
+
 ## Males
+
+### graphical descriptive results
+
+```{r}
+barchartGC(~infected + treatment,data=FinalData)
+barchartGC(~infected + treatment,data=FinalData, type="percent")
+
+```
+
+
+  
+On the first plot the frequency of males that the vaccine is slightly lower to contract the virus than those who took the placebo. On the second Plot which represents the oercentage of male that took the vaccine to those who did not. it seen that the male that took the vaccine have a lower percentage of contracting the virus.
 
 ### inferential results   
 
@@ -45,7 +69,7 @@ confIntUpper = round(confIntUpper)
 
 The efficacy for Males was 'r' efficMales'%  
 
-
+The 95% confidence interval for efficacy ('r confIntLower', 'r confIntUpper')%
 
 ## Females
 
