@@ -96,14 +96,143 @@ the fishers test gives a p-value of 0.00000000000019. the odds ratio tells us th
 
 ### Male conclusion 
 
+for the male it is observed from the analysis that the vaccine is effective in preventing them from getting the virus. 
 
 ## Females
 
+### graphical descriptive results
+
+```{r}
+barchartGC(~infected + treatment,data=FinalData)
+barchartGC(~infected + treatment,data=FinalData, type="percent")
+
+```
+
+
+  
+On the first plot the frequency of females that the vaccine is slightly lower to contract the virus than those who took the placebo. On the second Plot which represents the oercentage of female that took the vaccine to those who did not. it seen that the male that took the vaccine have a lower percentage of contracting the virus.
+
+
+
+### numerical descriptive results
+
+```{r}
+table1 <- xtabs(~infected + treatment,data=FinalData)
+rowPerc(table1)
+colPerc(table1)
+```
+
+the table shows that if a female was to get the vaccine she'll be more likely to contract the virus
+
+
+### inferential results   
+
+In here you have the chi-squared test results and the fisher exact test result.
+
+Suppose I got a fisher exact value of 4.22 (odds ratio)
+Also 95% CI  on the odds ratio (3.82, 4.91)
+
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+
+based on the inferential results, the chi-squared test gives a p-value of 0.00000000000012, which is less than 0.05, so we reject the null hypothesis.
+the fishers test gives a p-value of 0.00000000000019. the odds ratio tells us that the males that take the vaccine have 1.7 chances to not contract the virus as compared to those that took the placebo.
+
+### Female conclusion 
+
+for the female it is observed from the analysis that the vaccine is effective in preventing them from getting the virus. 
 
 
 ## LGBTQ
 
+### graphical descriptive results
+
+```{r}
+barchartGC(~infected + treatment,data=FinalData)
+barchartGC(~infected + treatment,data=FinalData, type="percent")
+
+```
+
+
+  
+On the first plot the frequency of lgbt that the vaccine is slightly lower to contract the virus than those who took the placebo. On the second Plot which represents the oercentage of male that took the vaccine to those who did not. it seen that the lgbt that took the vaccine have a lower percentage of contracting the virus.
+
+
+
+### numerical descriptive results
+
+```{r}
+table1 <- xtabs(~infected + treatment,data=FinalData)
+rowPerc(table1)
+colPerc(table1)
+```
+
+the table shows that if a lgbt was to get the vaccine he'll be more likely to contract the virus
+
+
+### inferential results   
+
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+
+based on the inferential results, the chi-squared test gives a p-value of 0.00000000000012, which is less than 0.05, so we reject the null hypothesis.
+the fishers test gives a p-value of 0.00000000000019. the odds ratio tells us that the lgbt that take the vaccine have 1.7 chances to not contract the virus as compared to those that took the placebo.
+
+### lgbt conclusion 
+
+for the lgbt it is observed from the analysis that the vaccine is effective in preventing them from getting the virus. 
 
 
 ## Druggies
 
+### graphical descriptive results
+
+```{r}
+barchartGC(~infected + treatment,data=FinalData)
+barchartGC(~infected + treatment,data=FinalData, type="percent")
+
+```
+
+
+  
+On the first plot the frequency of druggies that the vaccine is slightly lower to contract the virus than those who took the placebo. On the second Plot which represents the oercentage of male that took the vaccine to those who did not. it seen that the druggie that took the vaccine have a lower percentage of contracting the virus.
+
+
+
+### numerical descriptive results
+
+```{r}
+table1 <- xtabs(~infected + treatment,data=FinalData)
+rowPerc(table1)
+colPerc(table1)
+```
+
+the table shows that if a male was to get the vaccine he'll be more likely to contract the virus
+
+
+### inferential results   
+
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+
+based on the inferential results, the chi-squared test gives a p-value of 0.00000000000012, which is less than 0.05, so we reject the null hypothesis.
+the fishers test gives a p-value of 0.00000000000019. the odds ratio tells us that the druggie that take the vaccine have 1.7 chances to not contract the virus as compared to those that took the placebo.
+
+### druggie conclusion 
+
+for the druggie it is observed from the analysis that the vaccine is effective in preventing them from getting the virus. 
