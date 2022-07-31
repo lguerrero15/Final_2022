@@ -50,6 +50,19 @@ barchartGC(~infected + treatment,data=FinalData, type="percent")
   
 On the first plot the frequency of males that the vaccine is slightly lower to contract the virus than those who took the placebo. On the second Plot which represents the oercentage of male that took the vaccine to those who did not. it seen that the male that took the vaccine have a lower percentage of contracting the virus.
 
+
+
+### numerical descriptive results
+
+```{r}
+table1 <- xtabs(~infected + treatment,data=FinalData)
+rowPerc(table1)
+colPerc(table1)
+```
+
+the table shows that if a male was to get the vaccine he'll be more likely to contract the virus
+
+
 ### inferential results   
 
 In here you have the chi-squared test results and the fisher exact test result.
@@ -70,6 +83,19 @@ confIntUpper = round(confIntUpper)
 The efficacy for Males was 'r' efficMales'%  
 
 The 95% confidence interval for efficacy ('r confIntLower', 'r confIntUpper')%
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+
+based on the inferential results, the chi-squared test gives a p-value of 0.00000000000012, which is less than 0.05, so we reject the null hypothesis.
+the fishers test gives a p-value of 0.00000000000019. the odds ratio tells us that the males that take the vaccine have 1.7 chances to not contract the virus as compared to those that took the placebo.
+
+### Male conclusion 
+
 
 ## Females
 
