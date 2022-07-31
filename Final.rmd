@@ -153,14 +153,14 @@ for the female it is observed from the analysis that the vaccine is effective in
 ### graphical descriptive results
 
 ```{r}
-barchartGC(~infected + treatment,data=FinalData)
+barchartGC(~treatment+ LGBTQ,data=FinalData)
+barchartGC(~infected + LGBTQ,data=FinalData)
 barchartGC(~infected + treatment,data=FinalData, type="percent")
 
 ```
 
-
   
-On the first plot the frequency of lgbt that the vaccine is slightly lower to contract the virus than those who took the placebo. On the second Plot which represents the oercentage of male that took the vaccine to those who did not. it seen that the lgbt that took the vaccine have a lower percentage of contracting the virus.
+On the first plot the frequency of lgbt that participated is lower then staight. on the second plot lgbt is far lower then straight on contracting covid and being okay. On the third Plot which represents the percentage of lgbt and straight that took the vaccine to those who did not. it seen that the lgbt that took the vaccine have a lower percentage of contracting the virus.
 
 
 
@@ -172,7 +172,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-the table shows that if a lgbt was to get the vaccine he'll be more likely to contract the virus
+the table shows that if a lgbt was to get the vaccine they'll be more likely to contract the virus
 
 
 ### inferential results   
@@ -198,14 +198,15 @@ for the lgbt it is observed from the analysis that the vaccine is effective in p
 ### graphical descriptive results
 
 ```{r}
-barchartGC(~infected + treatment,data=FinalData)
+barchartGC(~treatment+ Druggies,data=FinalData)
+barchartGC(~infected + Druggies,data=FinalData)
 barchartGC(~infected + treatment,data=FinalData, type="percent")
 
 ```
 
 
   
-On the first plot the frequency of druggies that the vaccine is slightly lower to contract the virus than those who took the placebo. On the second Plot which represents the oercentage of male that took the vaccine to those who did not. it seen that the druggie that took the vaccine have a lower percentage of contracting the virus.
+On the first plot the frequency of druggies that participated is lower then non druggies. on the second plot druggies is far lower then non druggies on contracting covid and being okay. On the third Plot which represents the percentage of druggies and non druggies that took the vaccine to those who did not. it seen that the druggies that took the vaccine have a lower
 
 
 
